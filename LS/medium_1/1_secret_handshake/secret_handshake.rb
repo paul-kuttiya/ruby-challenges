@@ -1,5 +1,5 @@
 class SecretHandshake
-  attr_accessor :binary
+  attr_reader :binary
   @@words = ["wink", "double blink", "close your eyes", "jump"]
 
   def initialize(n)
