@@ -1,7 +1,6 @@
 class PigLatin
-  def self.translate(word)
-    words_arr = word.split(' ')
-    words_arr.map do |w|
+  def self.translate(phrase)
+    phrase.split(' ').map do |w|
       pig_latin(w)
     end.join(' ')
   end
