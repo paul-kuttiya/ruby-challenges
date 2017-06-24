@@ -3,7 +3,7 @@ class Clock
 
   def initialize(hours, minutes)
     @total = (hours * 60) + minutes
-    get_time 
+    get_time
   end
 
   def get_time
