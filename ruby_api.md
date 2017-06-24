@@ -43,3 +43,26 @@ h.sort.map {|k, v| [k, v.sort]}.to_h #=> {3 => [], 4 => [], ...}
 ```
 * ruby string interpolation use double quotes `"#{some_ruby}"`  
 ~> will not work with single quotes
+
+* build ruby class within a class method  
+```ruby
+class something
+  def initialize(param1, param2)
+    @param1 = param1
+    @param2 = param2
+  end
+
+  def self.build(param1, param2)
+    new(param1, param2)
+  end
+
+  #other methods...
+end
+```
+
+* convert number in to leading 0 digits string  
+~> `"%02d"%123" #=> "00123"`  
+
+* modular in ruby  
+~> `1 % 24 #=> 1`  
+~> if minus moudular will substract `-1 % 24 #=> 23`
