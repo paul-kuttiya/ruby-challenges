@@ -15,6 +15,19 @@
 [8, 9, 10]-->
 ```
 
+* manually build each_cons  
+```ruby
+def consec_num(array, num=1)
+  result = []
+  array.each_with_index do |n, idx|
+    last_idx = idx + (num - 1)
+    chunk = array[idx..last_idx]
+    result << chunk if chunk.size == num
+  end
+  result
+end
+```
+
 * use scan to extract in array matched regex  
 ~> `'AUGUUUUGG'.scan(/\w{3}/)`  
 ~> `["AUG", "UUU", "UGG"]`
