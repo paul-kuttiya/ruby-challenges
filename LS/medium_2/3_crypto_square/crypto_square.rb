@@ -48,7 +48,7 @@ class Crypto
     cipher_join(' ')
   end
 
-  # private
+  private
   def cipherhash
     result = {}
 
