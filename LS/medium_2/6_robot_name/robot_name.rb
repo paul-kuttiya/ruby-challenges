@@ -22,6 +22,7 @@ class Robot
   end
 
   def reset
+    @@robot_names.delete(name)
     self.name = self.class.new.name
   end
 
