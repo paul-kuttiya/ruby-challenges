@@ -8,7 +8,8 @@
 #find length for output
 #find the sq root of the length then round up = n
 #output message in array, with n chunk of letters for each row 
-#re-arrange array element into new array, by each element index 
+#re-arrange array element into new array, by each element index ~> use hash?
+#join hash into string
 
 class Crypto
   def initialize(message)
@@ -38,13 +39,16 @@ class Crypto
 
   def ciphertext
     cipher_join
+
+    # re-arrange string element in array by index
+    # plaintext_segments.map(&:chars).transpose.map(&:join)    
   end
 
   def normalize_ciphertext
     cipher_join(' ')
   end
 
-  private
+  # private
   def cipherhash
     result = {}
 
@@ -63,3 +67,6 @@ class Crypto
     cipherhash.map { |_, v| v}.join(joiner)    
   end
 end
+
+crypto = Crypto.new('Have a nice day. Feed the dog & chill out!')
+p crypto.cipherhash
